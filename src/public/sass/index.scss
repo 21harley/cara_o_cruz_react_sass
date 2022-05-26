@@ -1,0 +1,205 @@
+@import 'range/mixin.scss';
+:root{
+    --color-background-one:white;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--color-background-one);
+    font-family: 'Inter', sans-serif;
+}
+
+.container-home{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    &__grid{
+        margin-top: 20px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 25% 50% 25%;
+    }
+    &--block{
+        display: none;
+    }
+    &--none{
+        display: block;
+        margin-top: 190px;
+    }
+    @include md{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+        &__grid{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 100%;
+        }
+        &--none{
+            display: none;
+        } 
+        &--block{
+            display: block;
+        }
+    }
+    @include sm{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+        &__grid{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 100%;
+        }
+        &--none{
+            display: none;
+        } 
+        &--block{
+            display: block;
+        }
+    }
+}
+
+.button-moneda{
+@include sm{
+    width: 142px;
+    height: 32px;
+    background: #FF4AA1;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+width: 280px;
+height: 60px;
+background: #FF4AA1;
+margin: auto;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+.container-moneda{
+width: 400px;
+height: 350px;
+margin: auto;
+background-color: grey;
+@include sm{
+    max-width: 300px;
+height: 250px;
+width: 100%;
+    margin: auto;
+    background-color: grey;
+}
+}
+
+.logo{
+    width: 146px;
+    height: 48px;
+    background-color: grey;
+    margin: auto;
+    &--margin-footer{
+      margin-top: 50px;
+    }
+}
+.banner-large{
+    max-width: 780px;
+    width: 100%;
+    height: 90px;
+    background-color:orange;
+    margin: auto;
+    &--margen{
+        margin-top: 30px;
+    }
+    @include md{
+        max-width: 620px;
+        width: 100%;
+        height: 50px;
+        background-color:orange;
+        margin: auto;
+        &--margen{
+            margin-top: 30px;
+        }
+    }
+    @include sm{
+        max-width: 320px;
+        width: 100%;
+        height: 50px;
+        background-color:orange;
+        margin: auto;
+        &--margen{
+            margin-top: 30px;
+        }
+    }
+}
+.banner-cube{
+    max-width: 300px;
+height: 250px;
+width: 100%;
+margin: auto;
+background: #F39E39;
+&--margin{
+    margin-bottom: 60px;
+}
+@include md{
+    &--margin{
+        margin-bottom: 25px;
+    }
+}
+@include sm{
+    &--margin{
+        margin-bottom: 17px;
+    }
+}
+}
+.static-box{
+    max-width: 300px;
+    width: 100%;
+    height: 250px;
+margin: auto;
+background: #4BBEFF;
+}
+.container-text{
+    text-align: center;
+    width: 100%;
+    max-width: 720px;
+    padding: 10 / 0;
+    margin: auto;
+    &__li{
+        text-align: left;
+        margin-top: 10px;
+    }
+    @include md{
+        text-align: center;
+        width: 100%;
+        max-width: 620px;
+        margin: auto;
+        &__li{
+            text-align: left;
+            margin-top: 10px;
+        }
+    }
+    @include sm{
+        text-align: center;
+        width: 100%;
+        max-width: 320px;
+        padding: 10 / 0;
+        margin: auto;
+        &__li{
+            text-align: left;
+            margin-top: 10px;
+        }
+    }
+}
+.footer{
+max-width: 760px;
+width: 100%;
+text-align: center;
+margin: auto;
+margin-top: 10px;
+@include sm{
+    max-width: 360px;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+}
+}

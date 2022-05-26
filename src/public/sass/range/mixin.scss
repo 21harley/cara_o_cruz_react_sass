@@ -1,0 +1,17 @@
+$endpoint_one:400px;
+$endpoint_two:900px;
+@mixin sm(){
+    @media (min-width:0px) and (max-width:$endpoint_one){
+      @content;
+    }
+}
+@mixin md(){
+    @media (min-width:$endpoint_one) and (max-width:$endpoint_two){
+      @content;
+    }
+}
+@mixin mx(){
+  @media (min-width:$endpoint_two) and (max-width:1200){
+    @content;
+  }
+}
