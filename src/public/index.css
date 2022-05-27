@@ -1,0 +1,13 @@
+.moneda__cara{
+    background-image: url('./../img/Juego\ Cara\ o\ Cruz\ Online-Sol-Front-v001.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: rotateX(170deg);
+    display: none;
+  }
+  
+  .moneda__cruz{
+      background-image: url('./../img/Juego\ Cara\ o\ Cruz\ Online-Aguila-Back-v001.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+  }

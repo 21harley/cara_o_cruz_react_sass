@@ -1,3 +1,4 @@
+import Moneda from "./componets/Moneda";
 function Home() {
   return (
     <div className="container-home">
@@ -24,8 +25,7 @@ function Home() {
               sencilla y divertida.¡Prueba tu suerte!
             </p>
           </div>
-          <div className="container-moneda"></div>
-          <div className="button-moneda"></div>
+          <Moneda />
           <div className="container-home--block">
             <div className="banner-cube banner-cube--margin"></div>
             <div className="static-box"></div>
