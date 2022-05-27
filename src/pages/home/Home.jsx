@@ -1,10 +1,40 @@
+import { useState } from "react";
 import Moneda from "./componets/Moneda";
 function Home() {
+  const [contador, setContador] = useState({ cara: 0, cruz: 0 });
+  let total = contador.cara + contador.cruz;
+  if (!total) {
+    total = 1;
+  }
   return (
     <div className="container-home">
       <div className="container-home__grid">
         <div className="container-home--none">
-          <div className="banner-cube banner-cube--margin"></div>
+          <div className="banner-cube banner-cube--margin">
+            <div className="banner-cube__width">
+              <div className="banner-cube__process">
+                <h3>Cruz</h3>
+                <h3>Cara</h3>
+              </div>
+              <div className="banner-cube__process">
+                <h3>{contador.cruz}</h3>
+                <h3>{contador.cara}</h3>
+              </div>
+              <progress
+                className="banner-cube__progress"
+                id="file"
+                max={contador.cruz + contador.cara}
+                value={contador.cruz}
+              >
+                {" "}
+                70%{" "}
+              </progress>
+              <div className="banner-cube__process">
+                <h3>{Number((100 / total) * contador.cruz).toFixed(1)}%</h3>
+                <h3>{Number((100 / total) * contador.cara).toFixed(1)}%</h3>
+              </div>
+            </div>
+          </div>
           <div className="banner-cube banner-cube--margin"></div>
         </div>
         <div>
@@ -25,9 +55,33 @@ function Home() {
               sencilla y divertida.¡Prueba tu suerte!
             </p>
           </div>
-          <Moneda />
+          <Moneda setContador={setContador} contador={contador} />
           <div className="container-home--block">
-            <div className="banner-cube banner-cube--margin"></div>
+            <div className="banner-cube banner-cube--margin">
+              <div className="banner-cube__width">
+                <div className="banner-cube__process">
+                  <h3>Cruz</h3>
+                  <h3>Cara</h3>
+                </div>
+                <div className="banner-cube__process">
+                  <h3>{contador.cruz}</h3>
+                  <h3>{contador.cara}</h3>
+                </div>
+                <progress
+                  className="banner-cube__progress"
+                  id="file"
+                  max={contador.cruz + contador.cara}
+                  value={contador.cruz}
+                >
+                  {" "}
+                  70%{" "}
+                </progress>
+                <div className="banner-cube__process">
+                  <h3>{Number((100 / total) * contador.cruz).toFixed(1)}%</h3>
+                  <h3>{Number((100 / total) * contador.cara).toFixed(1)}%</h3>
+                </div>
+              </div>
+            </div>
             <div className="static-box"></div>
           </div>
           <div className="container-text">

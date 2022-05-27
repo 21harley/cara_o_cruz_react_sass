@@ -1,5 +1,5 @@
 import Audio from "./../../../public/audio/Sonido Lanzar una moneda al aire.wav";
-function Moneda() {
+function Moneda({ setContador, contador }) {
   const moneda = {
     contador: 0,
     ban: true,
@@ -39,10 +39,15 @@ function Moneda() {
           }
           audio.pause();
           audio.currentTime = 0;
+          if (limite % 2 === 0) {
+            setContador({ ...contador, cara: contador.cara + 1 });
+          } else {
+            setContador({ ...contador, cruz: contador.cruz + 1 });
+          }
         }
         moneda.contador = moneda.contador === 360 ? 0 : moneda.contador;
       },
-      5,
+      0.5,
       [audio]
     );
   };
