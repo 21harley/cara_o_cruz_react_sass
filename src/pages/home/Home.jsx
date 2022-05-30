@@ -9,6 +9,7 @@ function Home() {
   const recarga = () => {
     setContador({ cara: 0, cruz: 0 });
   };
+
   return (
     <div className="container-home">
       <div className="container-home__grid">
@@ -30,9 +31,17 @@ function Home() {
                 max={
                   contador.cruz + contador.cara === 0
                     ? 2
-                    : contador.cruz + contador.cara
+                    : contador.cruz === 0
+                    ? contador.cara
+                    : contador.cara + contador.cruz
                 }
-                value={contador.cruz === 0 ? 1 : contador.cruz}
+                value={
+                  contador.cruz === 0
+                    ? contador.cara === 0
+                      ? 1
+                      : 0
+                    : contador.cruz
+                }
               >
                 {" "}
                 70%{" "}
@@ -92,9 +101,17 @@ function Home() {
                   max={
                     contador.cruz + contador.cara === 0
                       ? 2
-                      : contador.cruz + contador.cara
+                      : contador.cruz === 0
+                      ? contador.cara
+                      : contador.cara + contador.cruz
                   }
-                  value={contador.cruz === 0 ? 1 : contador.cruz}
+                  value={
+                    contador.cruz === 0
+                      ? contador.cara === 0
+                        ? 1
+                        : 0
+                      : contador.cruz
+                  }
                 >
                   {" "}
                   70%{" "}
