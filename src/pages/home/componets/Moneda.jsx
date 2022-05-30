@@ -6,24 +6,37 @@ function Moneda({ setContador, contador }) {
     active: true,
     resto: 0,
     bandera: 0,
+    sumador: 6,
+    vueltas: 0,
+    funcL: [1, 3, 3, 6, 6, 6],
   };
   const mover = () => {
     const cara = document.querySelector(".moneda__cara");
     const cruz = document.querySelector(".moneda__cruz");
     const audio = document.querySelector("#audio");
-    let limite = Math.floor(Math.random() * (8 - 1)) + 1,
+    let limite = Math.floor(Math.random() * (6 - 1)) + 1,
+      limite1 = Math.floor(Math.random() * (6 - 1)) + 1,
       iterador = 0;
+
+    limite = limite + limite1;
+    moneda.vueltas = limite;
     moneda.active = false;
     moneda.bandera = limite * 180 + moneda.resto;
     audio.play();
     let inter = setInterval(
       () => {
-        moneda.contador++;
-        iterador++;
+        moneda.contador += moneda.sumador;
+        iterador += moneda.sumador;
         if (moneda.contador === 90 || moneda.contador === 270) {
           cruz.style.display = moneda.ban ? "none" : "block";
           cara.style.display = moneda.ban ? "block" : "none";
           moneda.ban = !moneda.ban;
+          moneda.vueltas--;
+          //console.log(moneda.sumador, limite, moneda.vueltas);
+          if (moneda.funcL[moneda.vueltas]) {
+            moneda.sumador = moneda.funcL[moneda.vueltas];
+            iterador += moneda.funcL[moneda.vueltas];
+          }
         }
         if (moneda.ban) {
           cruz.style.transform = " rotateY(" + moneda.contador + "deg)";
@@ -47,7 +60,7 @@ function Moneda({ setContador, contador }) {
         }
         moneda.contador = moneda.contador === 360 ? 0 : moneda.contador;
       },
-      0.5,
+      6,
       [audio]
     );
   };

@@ -6,12 +6,16 @@ function Home() {
   if (!total) {
     total = 1;
   }
+  const recarga = () => {
+    setContador({ cara: 0, cruz: 0 });
+  };
   return (
     <div className="container-home">
       <div className="container-home__grid">
         <div className="container-home--none">
           <div className="banner-cube banner-cube--margin">
             <div className="banner-cube__width">
+              <h3>Resultados:</h3>
               <div className="banner-cube__process">
                 <h3>Cruz</h3>
                 <h3>Cara</h3>
@@ -23,15 +27,29 @@ function Home() {
               <progress
                 className="banner-cube__progress"
                 id="file"
-                max={contador.cruz + contador.cara}
-                value={contador.cruz}
+                max={
+                  contador.cruz + contador.cara === 0
+                    ? 2
+                    : contador.cruz + contador.cara
+                }
+                value={contador.cruz === 0 ? 1 : contador.cruz}
               >
                 {" "}
                 70%{" "}
               </progress>
               <div className="banner-cube__process">
-                <h3>{Number((100 / total) * contador.cruz).toFixed(1)}%</h3>
-                <h3>{Number((100 / total) * contador.cara).toFixed(1)}%</h3>
+                <span>{Number((100 / total) * contador.cruz).toFixed(1)}%</span>
+                <span>{Number((100 / total) * contador.cara).toFixed(1)}%</span>
+              </div>
+              <div className="banner-cube__buttonR">
+                <button
+                  className="buttonR"
+                  onClick={() => {
+                    recarga();
+                  }}
+                >
+                  Recarga
+                </button>
               </div>
             </div>
           </div>
@@ -59,6 +77,7 @@ function Home() {
           <div className="container-home--block">
             <div className="banner-cube banner-cube--margin">
               <div className="banner-cube__width">
+                <h3>Resultados:</h3>
                 <div className="banner-cube__process">
                   <h3>Cruz</h3>
                   <h3>Cara</h3>
@@ -70,15 +89,33 @@ function Home() {
                 <progress
                   className="banner-cube__progress"
                   id="file"
-                  max={contador.cruz + contador.cara}
-                  value={contador.cruz}
+                  max={
+                    contador.cruz + contador.cara === 0
+                      ? 2
+                      : contador.cruz + contador.cara
+                  }
+                  value={contador.cruz === 0 ? 1 : contador.cruz}
                 >
                   {" "}
                   70%{" "}
                 </progress>
                 <div className="banner-cube__process">
-                  <h3>{Number((100 / total) * contador.cruz).toFixed(1)}%</h3>
-                  <h3>{Number((100 / total) * contador.cara).toFixed(1)}%</h3>
+                  <span>
+                    {Number((100 / total) * contador.cruz).toFixed(1)}%
+                  </span>
+                  <span>
+                    {Number((100 / total) * contador.cara).toFixed(1)}%
+                  </span>
+                </div>
+                <div className="banner-cube__buttonR">
+                  <button
+                    className="buttonR"
+                    onClick={() => {
+                      recarga();
+                    }}
+                  >
+                    Recarga
+                  </button>
                 </div>
               </div>
             </div>
@@ -167,6 +204,24 @@ function Home() {
               </b>
               .
             </p>
+            <div
+              style={{
+                width: "100%",
+                height: "60px",
+                display: "grid",
+                paddingBottom: "56%",
+                position: "relative",
+              }}
+            >
+              <iframe
+                src="https://giphy.com/embed/JQG2I0rQejbRQiDMQZ"
+                width="100%"
+                height="100%"
+                style={{ position: "absolute" }}
+                frameBorder="0"
+                allowFullScreen
+              ></iframe>
+            </div>
           </div>
           <div className="banner-large"></div>
           <div className="container-text">

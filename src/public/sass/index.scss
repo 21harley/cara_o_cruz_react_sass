@@ -5,6 +5,7 @@
     --color-background-three:grey;
     --color-background-four:orange;
     --color-background-two-dark:#fa097d;
+    --color-text-one:#EB3DC8;
     --border-size:10px;
 }
 
@@ -69,6 +70,16 @@ body{
     width: 100%;
     display: grid;
 }
+
+.container-text{
+    &__title{
+        color: var(--color-text-one);
+    }
+    &__h2{
+        color: var(--color-text-one);
+    }
+}
+
 .button-moneda{
 @include sm{
     width: 150px;
@@ -95,7 +106,7 @@ color: var(--color-background-one);
 font-size: 18px;
 }
 .container-moneda{
-width: 400px;
+width: 380px;
 height: 350px;
 margin: auto;
 display: grid;
@@ -167,6 +178,10 @@ background: var(--color-background-four);
 &__process h3{
     margin: 0;
 }
+&__process span{
+    font-size: small;
+    font-weight: 700;
+}
 &__width{
     width: 80%;
    margin: auto;
@@ -176,12 +191,19 @@ background: var(--color-background-four);
 &__progress{
     width: 100%;
     background-color: #4BBEFF;
+    height: 8px;
 }
 &__progress::-webkit-progress-bar {
     background-color: gold;
   }
 &__progress::-webkit-progress-value {
     background-color: darkred;
+}
+&__buttonR{
+    height: 50px;
+    width: 100%;
+    display: grid;
+    place-items: center;
 }
 @include md{
     &--margin{
@@ -281,4 +303,18 @@ margin-top: 10px;
     background-image: url('./../img/Juego\ Cara\ o\ Cruz\ Online-Aguila-Back-v001.png');
     background-repeat: no-repeat;
     background-size: contain;
+}
+.buttonR{
+    background: none;
+    border: none;
+    cursor: pointer;
+    height: 30px;
+    width: 60%;
+    margin: auto;
+    border-radius: var(--border-size);
+    background-color: var(--color-background-two);
+    color: white;
+    &:hover{
+        background-color: var(--color-background-two-dark);
+    }
 }
