@@ -39,7 +39,7 @@ function Home() {
           <div className="container-home--block">
             <div className="static-box">
               <div className="banner-cube__width">
-                <h3>Resultados:</h3>
+                <h3 className="banner-cube__h3">Resultados:</h3>
                 <div className="banner-cube__process">
                   <h3>Cara</h3>
                   <h3>Cruz</h3>
@@ -88,7 +88,7 @@ function Home() {
                       recarga();
                     }}
                   >
-                    Reinicio
+                    Reiniciar
                   </button>
                 </div>
               </div>
@@ -221,7 +221,7 @@ function Home() {
           <div className="banner-cube banner-cube--margin"></div>
           <div className="static-box">
             <div className="banner-cube__width">
-              <h3>Resultados:</h3>
+              <h3 className="banner-cube__h3">Resultados:</h3>
               <div className="banner-cube__process">
                 <h3>Cara</h3>
                 <h3>Cruz</h3>
@@ -266,7 +266,7 @@ function Home() {
                     recarga();
                   }}
                 >
-                  Reinicio
+                  Reiniciar
                 </button>
               </div>
             </div>

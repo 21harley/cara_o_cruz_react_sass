@@ -160,6 +160,7 @@ width: 100%;
     &--margen{
         margin-top: 30px;
     }
+    display: none;
     @include md{
         max-width: 620px;
         width: 100%;
@@ -247,8 +248,8 @@ margin: auto;
 //background: #4BBEFF;
 margin-bottom: 10px;
 margin-top: 300px;
-color: var(--color-background-two);
-border: 2px solid #4BBEFF;
+color: #444243;
+border: 2px solid #d1d1d1;
 @include md{
     margin-top: 0px;
     width: 90%;
@@ -268,6 +269,7 @@ border: 2px solid #4BBEFF;
     margin: auto;
     &__p{
         padding: 0px 10px;
+        width: 90%;
     }
     &__li{
         text-align: left;
@@ -282,6 +284,8 @@ border: 2px solid #4BBEFF;
             text-align: left;
             margin-top: 10px;
         }
+        text-align:justify;
+        padding: 0px 10px;
     }
     @include sm{
         text-align: center;
@@ -292,6 +296,8 @@ border: 2px solid #4BBEFF;
             text-align: left;
             margin-top: 10px;
         }
+        text-align:justify;
+        padding: 0px 10px;
     }
 }
 .footer{
