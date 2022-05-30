@@ -14,8 +14,8 @@ function Moneda({ setContador, contador }) {
     const cara = document.querySelector(".moneda__cara");
     const cruz = document.querySelector(".moneda__cruz");
     const audio = document.querySelector("#audio");
-    let limite = Math.floor(Math.random() * (6 - 1)) + 1,
-      limite1 = Math.floor(Math.random() * (6 - 1)) + 1,
+    let limite = Math.floor(Math.random() * (12 - 1)) + 1,
+      limite1 = Math.floor(Math.random() * (12 - 1)) + 1,
       iterador = 0;
 
     limite = limite + limite1;
@@ -53,9 +53,9 @@ function Moneda({ setContador, contador }) {
           audio.pause();
           audio.currentTime = 0;
           if (limite % 2 === 0) {
-            setContador({ ...contador, cara: contador.cara + 1 });
-          } else {
             setContador({ ...contador, cruz: contador.cruz + 1 });
+          } else {
+            setContador({ ...contador, cara: contador.cara + 1 });
           }
         }
         moneda.contador = moneda.contador === 360 ? 0 : moneda.contador;
@@ -84,7 +84,7 @@ function Moneda({ setContador, contador }) {
             giro();
           }}
         >
-          Lanzamiento de moneda
+          Lanzar moneda
         </button>
       </div>
     </>

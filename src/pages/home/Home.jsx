@@ -15,54 +15,7 @@ function Home() {
       <div className="container-home__grid">
         <div className="container-home--none">
           <div className="banner-cube banner-cube--margin"></div>
-          <div className="banner-cube banner-cube--margin">
-            <div className="banner-cube__width">
-              <h3>Resultados:</h3>
-              <div className="banner-cube__process">
-                <h3>Cruz</h3>
-                <h3>Cara</h3>
-              </div>
-              <div className="banner-cube__process">
-                <h3>{contador.cruz}</h3>
-                <h3>{contador.cara}</h3>
-              </div>
-              <progress
-                className="banner-cube__progress"
-                id="file"
-                max={
-                  contador.cruz + contador.cara === 0
-                    ? 2
-                    : contador.cruz === 0
-                    ? contador.cara
-                    : contador.cara + contador.cruz
-                }
-                value={
-                  contador.cruz === 0
-                    ? contador.cara === 0
-                      ? 1
-                      : 0
-                    : contador.cruz
-                }
-              >
-                {" "}
-                70%{" "}
-              </progress>
-              <div className="banner-cube__process">
-                <span>{Number((100 / total) * contador.cruz).toFixed(1)}%</span>
-                <span>{Number((100 / total) * contador.cara).toFixed(1)}%</span>
-              </div>
-              <div className="banner-cube__buttonR">
-                <button
-                  className="buttonR"
-                  onClick={() => {
-                    recarga();
-                  }}
-                >
-                  Reinicio
-                </button>
-              </div>
-            </div>
-          </div>
+          <div className="banner-cube banner-cube--margin"></div>
         </div>
         <div>
           <div className="logo logo--header"></div>
@@ -84,33 +37,37 @@ function Home() {
           </div>
           <Moneda setContador={setContador} contador={contador} />
           <div className="container-home--block">
-            <div className="banner-cube banner-cube--margin">
+            <div className="static-box">
               <div className="banner-cube__width">
                 <h3>Resultados:</h3>
                 <div className="banner-cube__process">
-                  <h3>Cruz</h3>
                   <h3>Cara</h3>
+                  <h3>Cruz</h3>
                 </div>
                 <div className="banner-cube__process">
-                  <h3>{contador.cruz}</h3>
+                  <span>(Aguila)</span>
+                  <span>(Sol)</span>
+                </div>
+                <div className="banner-cube__process">
                   <h3>{contador.cara}</h3>
+                  <h3>{contador.cruz}</h3>
                 </div>
                 <progress
                   className="banner-cube__progress"
                   id="file"
                   max={
-                    contador.cruz + contador.cara === 0
+                    contador.cara + contador.cruz === 0
                       ? 2
-                      : contador.cruz === 0
-                      ? contador.cara
-                      : contador.cara + contador.cruz
+                      : contador.cara === 0
+                      ? contador.cruz
+                      : contador.cruz + contador.cara
                   }
                   value={
-                    contador.cruz === 0
-                      ? contador.cara === 0
+                    contador.cara === 0
+                      ? contador.cruz === 0
                         ? 1
                         : 0
-                      : contador.cruz
+                      : contador.cara
                   }
                 >
                   {" "}
@@ -118,10 +75,10 @@ function Home() {
                 </progress>
                 <div className="banner-cube__process">
                   <span>
-                    {Number((100 / total) * contador.cruz).toFixed(1)}%
+                    {Number((100 / total) * contador.cara).toFixed(1)}%
                   </span>
                   <span>
-                    {Number((100 / total) * contador.cara).toFixed(1)}%
+                    {Number((100 / total) * contador.cruz).toFixed(1)}%
                   </span>
                 </div>
                 <div className="banner-cube__buttonR">
@@ -136,7 +93,7 @@ function Home() {
                 </div>
               </div>
             </div>
-            <div className="static-box"></div>
+            <div className="banner-cube banner-cube--margin"></div>
           </div>
           <div className="container-text">
             <h2 className="container-text__h2">
@@ -262,7 +219,58 @@ function Home() {
         </div>
         <div className="container-home--none">
           <div className="banner-cube banner-cube--margin"></div>
-          <div className="static-box"></div>
+          <div className="static-box">
+            <div className="banner-cube__width">
+              <h3>Resultados:</h3>
+              <div className="banner-cube__process">
+                <h3>Cara</h3>
+                <h3>Cruz</h3>
+              </div>
+              <div className="banner-cube__process">
+                <span>(Aguila)</span>
+                <span>(Sol)</span>
+              </div>
+              <div className="banner-cube__process">
+                <h3>{contador.cara}</h3>
+                <h3>{contador.cruz}</h3>
+              </div>
+              <progress
+                className="banner-cube__progress"
+                id="file"
+                max={
+                  contador.cara + contador.cruz === 0
+                    ? 2
+                    : contador.cara === 0
+                    ? contador.cruz
+                    : contador.cruz + contador.cara
+                }
+                value={
+                  contador.cara === 0
+                    ? contador.cruz === 0
+                      ? 1
+                      : 0
+                    : contador.cara
+                }
+              >
+                {" "}
+                70%{" "}
+              </progress>
+              <div className="banner-cube__process">
+                <span>{Number((100 / total) * contador.cara).toFixed(1)}%</span>
+                <span>{Number((100 / total) * contador.cruz).toFixed(1)}%</span>
+              </div>
+              <div className="banner-cube__buttonR">
+                <button
+                  className="buttonR"
+                  onClick={() => {
+                    recarga();
+                  }}
+                >
+                  Reinicio
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div className="logo logo--margin-footer logo--footer"></div>

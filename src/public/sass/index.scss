@@ -74,9 +74,11 @@ body{
 .container-text{
     &__title{
         color: var(--color-text-one);
+        font-weight: 1000;
     }
     &__h2{
         color: var(--color-text-one);
+        font-weight: 1000;
     }
 }
 
@@ -183,7 +185,6 @@ width: 100%;
 height: 250px;
 width: 100%;
 margin: auto;
-background: var(--color-background-four);
 &--margin{
     margin-bottom: 60px;
 }
@@ -233,6 +234,7 @@ background: var(--color-background-four);
 }
 display: grid;
 place-items: center;
+display: none;
 }
 .static-box{
     border-radius: var(--border-size);
@@ -240,7 +242,17 @@ place-items: center;
     width: 100%;
     height: 250px;
 margin: auto;
-background: #4BBEFF;
+//background: #4BBEFF;
+margin-bottom: 10px;
+margin-top: 300px;
+color: var(--color-background-two);
+border: 2px solid #4BBEFF;
+@include md{
+    margin-top: 0px;
+}
+@include sm{
+    margin-top: 0px;
+}
 }
 .container-text{
     text-align: center;
@@ -309,7 +321,7 @@ margin-top: 10px;
 }
 }
 .moneda__cara{
-    background-image: url('./../img/Juego\ Cara\ o\ Cruz\ Online-Sol-Front-v001.png');
+    background-image: url('./../img/Juego\ Cara\ o\ Cruz\ Online-Aguila-Back-v001.png');
     background-repeat: no-repeat;
     background-size: contain;
     transform: rotateX(170deg);
@@ -317,7 +329,7 @@ margin-top: 10px;
 }
   
 .moneda__cruz{
-    background-image: url('./../img/Juego\ Cara\ o\ Cruz\ Online-Aguila-Back-v001.png');
+    background-image: url('./../img/Juego\ Cara\ o\ Cruz\ Online-Sol-Front-v001.png');
     background-repeat: no-repeat;
     background-size: contain;
 }
