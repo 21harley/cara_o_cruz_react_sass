@@ -14,6 +14,7 @@ function Home() {
     <div className="container-home">
       <div className="container-home__grid">
         <div className="container-home--none">
+          <div className="banner-cube banner-cube--margin"></div>
           <div className="banner-cube banner-cube--margin">
             <div className="banner-cube__width">
               <h3>Resultados:</h3>
@@ -57,15 +58,14 @@ function Home() {
                     recarga();
                   }}
                 >
-                  Recarga
+                  Reinicio
                 </button>
               </div>
             </div>
           </div>
-          <div className="banner-cube banner-cube--margin"></div>
         </div>
         <div>
-          <div className="logo"></div>
+          <div className="logo logo--header"></div>
           <div className="banner-large banner-large--margen"></div>
           <div className="container-text">
             <h1 className="container-text__title">¿Cara o Cruz?</h1>
@@ -131,7 +131,7 @@ function Home() {
                       recarga();
                     }}
                   >
-                    Recarga
+                    Reinicio
                   </button>
                 </div>
               </div>
@@ -265,10 +265,12 @@ function Home() {
           <div className="static-box"></div>
         </div>
       </div>
-      <div className="logo logo--margin-footer"></div>
+      <div className="logo logo--margin-footer logo--footer"></div>
       <div className="footer">
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. footer
+        Volado Online es un sitio de entretenimiento exclusivamente. A través de
+        nuestros simulador de cara o cruz podrás lanzar una moneda virtual al
+        aire para intentar adivinar el resultado. Este juego de azar es
+        completamente gratis y no se juega con dinero real.
       </div>
     </div>
   );

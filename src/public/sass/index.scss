@@ -31,7 +31,7 @@ body{
     }
     &--none{
         display: block;
-        margin-top: 190px;
+        margin-top: 280px;
     }
     @include md{
         margin-top: 20px;
@@ -121,14 +121,30 @@ width: 100%;
 }
 
 .logo{
-    width: 146px;
-    height: 48px;
-    background-color: var(--color-background-three);
+    width: 145px;
+    height: 100px;
+    //background-color: var(--color-background-three);
     margin: auto;
     &--margin-footer{
       margin-top: 50px;
     }
     border-radius: var(--border-size);
+    &--header{
+        background-image: url('./../img/Jugar\ Cara\ o\ Cruz\ Volado\ Online.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 150px;
+        width: 240px;
+        margin: auto;
+    }
+    &--footer{
+        background-image: url('./../img/Jugar\ Cara\ o\ Cruz\ Volado\ Online\ Footer.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 180px;
+    }
 }
 .banner-large{
     border-radius: var(--border-size);
@@ -147,7 +163,7 @@ width: 100%;
         background-color:var(--color-background-four);
         margin: auto;
         &--margen{
-            margin-top: 30px;
+            margin-top: 10px;
         }
     }
     @include sm{
@@ -230,8 +246,10 @@ background: #4BBEFF;
     text-align: center;
     width: 100%;
     max-width: 720px;
-    padding: 10 / 0;
     margin: auto;
+    &__p{
+        padding: 0px 10px;
+    }
     &__li{
         text-align: left;
         margin-top: 10px;
@@ -250,7 +268,6 @@ background: #4BBEFF;
         text-align: center;
         width: 100%;
         max-width: 320px;
-        padding: 10 / 0;
         margin: auto;
         &__li{
             text-align: left;
