@@ -21,16 +21,16 @@ function Home() {
           <div className="logo logo--header"></div>
           <div className="banner-large banner-large--margen"></div>
           <div className="container-text">
-            <h1 className="container-text__title">¿Cara o Cruz?</h1>
-            <p className="container-text__p">
+            <h1 className="container-text__title ">¿Cara o Cruz?</h1>
+            <p className="container-text__p    text--center">
               ¿Quieres <b>jugar cara o cruz</b> para probar tu suerte o para
               ayudarte a tomar una decisión? ¡Genial! Has llegado al sitio
               indicado.
             </p>
-            <p className="container-text__p">
+            <p className="container-text__p    text--center">
               ¡Genial! Has llegado al sitio indicado.
             </p>
-            <p className="container-text__p">
+            <p className="container-text__p    text--center">
               Aquí podrás hacer el <b>lanzamiento de moneda virtual</b> de forma
               sencilla y divertida.¡Prueba tu suerte!
             </p>
@@ -45,8 +45,8 @@ function Home() {
                   <h3>Cruz</h3>
                 </div>
                 <div className="banner-cube__process">
-                  <span>(Aguila)</span>
                   <span>(Sol)</span>
+                  <span>(Aguila)</span>
                 </div>
                 <div className="banner-cube__process">
                   <h3>{contador.cara}</h3>
@@ -227,8 +227,8 @@ function Home() {
                 <h3>Cruz</h3>
               </div>
               <div className="banner-cube__process">
-                <span>(Aguila)</span>
                 <span>(Sol)</span>
+                <span>(Aguila)</span>
               </div>
               <div className="banner-cube__process">
                 <h3>{contador.cara}</h3>
@@ -273,8 +273,9 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="logo logo--margin-footer logo--footer"></div>
       <div className="footer">
+        <div className="logo logo--margin-footer logo--footer"></div>
+        <hr />
         Volado Online es un sitio de entretenimiento exclusivamente. A través de
         nuestros simulador de cara o cruz podrás lanzar una moneda virtual al
         aire para intentar adivinar el resultado. Este juego de azar es

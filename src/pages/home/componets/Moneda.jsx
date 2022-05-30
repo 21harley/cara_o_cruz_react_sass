@@ -53,9 +53,9 @@ function Moneda({ setContador, contador }) {
           audio.pause();
           audio.currentTime = 0;
           if (limite % 2 === 0) {
-            setContador({ ...contador, cruz: contador.cruz + 1 });
-          } else {
             setContador({ ...contador, cara: contador.cara + 1 });
+          } else {
+            setContador({ ...contador, cruz: contador.cruz + 1 });
           }
         }
         moneda.contador = moneda.contador === 360 ? 0 : moneda.contador;

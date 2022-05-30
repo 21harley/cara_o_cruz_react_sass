@@ -75,10 +75,12 @@ body{
     &__title{
         color: var(--color-text-one);
         font-weight: 1000;
+        text-align: center;
     }
     &__h2{
         color: var(--color-text-one);
         font-weight: 1000;
+        text-align: center;
     }
 }
 
@@ -211,10 +213,10 @@ margin: auto;
     height: 8px;
 }
 &__progress::-webkit-progress-bar {
-    background-color: gold;
+    background-color: #4BBEFF;
   }
 &__progress::-webkit-progress-value {
-    background-color: darkred;
+    background-color: gold;
 }
 &__buttonR{
     height: 50px;
@@ -249,13 +251,18 @@ color: var(--color-background-two);
 border: 2px solid #4BBEFF;
 @include md{
     margin-top: 0px;
+    width: 90%;
 }
 @include sm{
     margin-top: 0px;
+    width: 90%;
 }
+}
+.text--center{
+    text-align: center;
 }
 .container-text{
-    text-align: center;
+    text-align:justify;
     width: 100%;
     max-width: 720px;
     margin: auto;
@@ -289,16 +296,20 @@ border: 2px solid #4BBEFF;
 }
 .footer{
 max-width: 760px;
-width: 100%;
+width: 50%;
 text-align: center;
 margin: auto;
 margin-top: 10px;
+font-size: small;
+font-weight:400;
 @include sm{
     max-width: 360px;
-    width: 100%;
+    width: 80%;
     text-align: center;
     margin: auto;
     margin-top: 10px;
+    padding: 0px 10px;
+    font-size: small;
 }
 }
 .moneda{
