@@ -128,7 +128,7 @@ function Home() {
               amigo o tengas que tomar una decisión y quieras echar un volado
               para saber qué hacer, pero no tengas una moneda a la mano.
             </p>
-            <p>
+            <p className="container-text__p">
               ¡No te preocupes! En nuestro sitio podrás{" "}
               <b>lanzar una moneda virtual al aire</b> para así tomar la mejor
               decisión. ¡Es muy fácil!, sólo tendrás que hacer lo siguiente:
