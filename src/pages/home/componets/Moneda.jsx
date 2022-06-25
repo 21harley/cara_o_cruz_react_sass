@@ -74,13 +74,8 @@ function Moneda({ setContador, contador }) {
     <>
       <div className="container-moneda">
         <div className="moneda">
-          <img
-            src={EndAgila}
-            className="moneda__cara"
-            alt="aguila"
-            loading="lazy"
-          />
-          <img src={EndSol} className="moneda__cruz" alt="sol" loading="lazy" />
+          <img src={EndAgila} className="moneda__cara" alt="aguila" />
+          <img src={EndSol} className="moneda__cruz" alt="sol" />
         </div>
         <audio src={Audio} id="audio"></audio>
       </div>
