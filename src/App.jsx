@@ -1,4 +1,5 @@
-import Home from "./pages/home/Home";
+import { lazy } from "react";
+const Home = lazy(() => import("./pages/home/Home"));
 function App() {
   return <Home></Home>;
 }
