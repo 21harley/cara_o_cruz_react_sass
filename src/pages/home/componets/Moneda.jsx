@@ -1,4 +1,10 @@
 import Audio from "./../../../public/audio/Sonido Lanzar una moneda al aire.wav";
+import Image from "react-image-webp";
+import InitSol from "./../../../public/img/Juego Cara o Cruz Online-Sol-Front-v001.png";
+import InitAgila from "./../../../public/img/Juego Cara o Cruz Online-Aguila-Back-v001.png";
+import EndSol from "./../../../public/img/Juego-Cara-o-Cruz-Online-Sol-Front-v001.webp";
+import EndAgila from "./../../../public/img/Juego-Cara-o-Cruz-Online-Aguila-Back-v001.webp";
+
 function Moneda({ setContador, contador }) {
   const moneda = {
     contador: 0,
@@ -71,8 +77,8 @@ function Moneda({ setContador, contador }) {
     <>
       <div className="container-moneda">
         <div className="moneda">
-          <div className="moneda__cara"></div>
-          <div className="moneda__cruz"></div>
+          <Image className="moneda__cara" src={InitAgila} webp={EndAgila} />
+          <Image className="moneda__cruz" src={InitSol} webp={EndSol} />
         </div>
         <audio src={Audio} id="audio"></audio>
       </div>
