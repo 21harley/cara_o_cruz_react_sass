@@ -25,7 +25,6 @@ function Home() {
         </div>
         <div>
           <div className="container-center">
-            <img src={InitImgWebp} className="logo logo--header" alt="logo" />
             <Image
               className="logo logo--header"
               src={InitImg}
