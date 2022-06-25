@@ -1,5 +1,11 @@
 import { useState } from "react";
 import Moneda from "./componets/Moneda";
+import InitImg from "./../../public/img/Jugar Cara o Cruz Volado Online.png";
+import InitImgWebp from "./../../public/img/Jugar-Cara-o-Cruz-Volado-Online.webp";
+import EndImg from "./../../public/img/Jugar Cara o Cruz Volado Online Footer.png";
+import EndImgWebp from "./../../public/img/Jugar-Cara-o-Cruz-Volado-Online-Footer.webp";
+import Image from "react-image-webp";
+
 function Home() {
   const [contador, setContador] = useState({ cara: 0, cruz: 0 });
   let total = contador.cara + contador.cruz;
@@ -18,7 +24,13 @@ function Home() {
           <div className="banner-cube banner-cube--margin"></div>
         </div>
         <div>
-          <div className="logo logo--header"></div>
+          <div className="container-center">
+            <Image
+              className="logo logo--header"
+              src={InitImg}
+              webp={InitImgWebp}
+            />
+          </div>
           <div className="banner-large banner-large--margen"></div>
           <div className="container-text">
             <h1 className="container-text__title ">¿Cara o Cruz?</h1>
@@ -274,7 +286,11 @@ function Home() {
         </div>
       </div>
       <div className="footer">
-        <div className="logo logo--margin-footer logo--footer"></div>
+        <Image
+          className="logo logo--margin-footer logo--footer"
+          src={EndImg}
+          webp={EndImgWebp}
+        />
         <hr />
         Volado Online es un sitio de entretenimiento exclusivamente. A través de
         nuestros simulador de cara o cruz podrás lanzar una moneda virtual al
