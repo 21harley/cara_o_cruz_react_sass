@@ -1,7 +1,7 @@
-import { useState } from "react";
-import Moneda from "./componets/Moneda";
+import { useState, lazy } from "react";
 import InitImgWebp from "./../../public/img/Jugar-Cara-o-Cruz-Volado-Online.webp";
 import EndImgWebp from "./../../public/img/Jugar-Cara-o-Cruz-Volado-Online-Footer.webp";
+const Moneda = lazy(() => import("./componets/Moneda"));
 
 function Home() {
   const [contador, setContador] = useState({ cara: 0, cruz: 0 });
