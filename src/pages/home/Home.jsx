@@ -1,7 +1,10 @@
-import { useState, lazy } from "react";
+import { useState } from "react";
+import Moneda from "./componets/Moneda";
+import InitImg from "./../../public/img/Jugar Cara o Cruz Volado Online.png";
 import InitImgWebp from "./../../public/img/Jugar-Cara-o-Cruz-Volado-Online.webp";
+import EndImg from "./../../public/img/Jugar Cara o Cruz Volado Online Footer.png";
 import EndImgWebp from "./../../public/img/Jugar-Cara-o-Cruz-Volado-Online-Footer.webp";
-const Moneda = lazy(() => import("./componets/Moneda"));
+import Image from "react-image-webp";
 
 function Home() {
   const [contador, setContador] = useState({ cara: 0, cruz: 0 });
@@ -22,11 +25,11 @@ function Home() {
         </div>
         <div>
           <div className="container-center">
-            <img
-              src={InitImgWebp}
+            <img src={InitImgWebp} className="logo logo--header" alt="logo" />
+            <Image
               className="logo logo--header"
-              alt="logo"
-              loading="lazy"
+              src={InitImg}
+              webp={InitImgWebp}
             />
           </div>
           <div className="banner-large banner-large--margen"></div>
@@ -284,11 +287,10 @@ function Home() {
         </div>
       </div>
       <div className="footer">
-        <img
+        <Image
           className="logo logo--margin-footer logo--footer"
-          src={EndImgWebp}
-          alt="logo-footer"
-          loading="lazy"
+          src={EndImg}
+          webp={EndImgWebp}
         />
         <hr />
         Volado Online es un sitio de entretenimiento exclusivamente. A través de
